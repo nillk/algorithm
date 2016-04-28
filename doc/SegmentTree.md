@@ -11,7 +11,8 @@ Math.pow(2, ((int) Math.ceil(Math.log(N) / Math.log(2)) + 1)) - 1
 
 ### 트리의 특징
 * 리프 노드는 들어온 들어온 데이터를 가지고 있고, 상위 노드들은 하위 트리의 대표값을 가진다.
-* 루트노드부터 차례대로 노드 번호를 매기면(1부터 시작) 자신의 노드 번호가 x라고 했을 때, 왼쪽 자식의 번호는 2*x, 오른쪽 자식의 번호는 2*x + 1이 된다.
+* 루트노드부터 차례대로 노드 번호를 매기면(1부터 시작) 자신의 노드 번호가 x라고 했을 때, 왼쪽 자식의 번호는 2 * x, 오른쪽 자식의 번호는 2 * x + 1이 된다.
+
 ![SegmentTree](http://3.bp.blogspot.com/-sxg363UiqaU/VLa_DU_pJSI/AAAAAAAAAzc/bnIp7S1zxqA/s1600/segment-tree1.png)
 
 ### find
