@@ -1,6 +1,6 @@
 import java.util.Scanner;
  
-public class Q1001_Turret {
+public class Q1002_Turret {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int test = scan.nextInt();
