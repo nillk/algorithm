@@ -1,6 +1,8 @@
-import com.sun.org.apache.bcel.internal.generic.IF_ICMPLE;
-
-import java.util.*;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
+import java.util.Set;
 
 public class Q2606_Virus {
     public static void main(String[] args) {
