@@ -9,12 +9,12 @@ public class Q2407_Combination {
 		byte n = scan.nextByte();
 		byte m = scan.nextByte();
 
-		System.out.println(factorial(n, m));
+		System.out.println(combination(n, m));
 
 		scan.close();
 	}
 
-	public static String factorial(int n, int m) {
+	public static String combination(int n, int m) {
 		FAC = new byte[200];
 		FAC[0] = 1;
 		FAC_SIZE = 1;
