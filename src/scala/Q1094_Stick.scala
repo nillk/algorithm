@@ -1,3 +1,5 @@
+package scala
+
 object Q1094_Stick {
   def main(args : Array[String]) : Unit = {
     var x = readInt
@@ -7,11 +9,11 @@ object Q1094_Stick {
       while (stick > x) {
         stick /= 2
       }
- 
+
       x -= stick
       count += 1
     }
- 
+
     print(count)
   }
 }

@@ -5,7 +5,6 @@ import java.util.regex.Pattern;
 public class Q8595_HiddenNumber {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		int strLength = scan.nextInt();
 		String str = scan.next();
 
 		Pattern pattern = Pattern.compile("([0-9]+)");

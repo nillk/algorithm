@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Q9764_SumOfDifferenctNaturalNumbers {
+public class Q9764_SumOfDifferentNaturalNumbers {
     static final int N = 2000;
     static final int DIVISOR = 100999;
 

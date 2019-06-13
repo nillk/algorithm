@@ -1,3 +1,5 @@
+package scala
+
 object Q1057_Tournament {
   def main(args : Array[String]) : Unit = {
     var Array(n, a, b) = readLine.split(" ").map(_.toInt)
@@ -9,6 +11,6 @@ object Q1057_Tournament {
     }
     println(count)
   }
- 
+
   def next(x: Double): Int = Math.ceil(x / 2).toInt
 }

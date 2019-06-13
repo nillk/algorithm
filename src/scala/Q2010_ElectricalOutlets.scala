@@ -1,3 +1,5 @@
+package scala
+
 object Q2010_ElectricalOutlets {
   def main(args: Array[String]) : Unit = {
     val n = readInt
