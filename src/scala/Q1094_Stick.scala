@@ -1,5 +1,3 @@
-package scala
-
 object Q1094_Stick {
   def main(args : Array[String]) : Unit = {
     var x = readInt

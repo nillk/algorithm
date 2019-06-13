@@ -1,5 +1,3 @@
-package scala
-
 object Q1251_WordSplit {
   def main (args: Array[String]) : Unit = {
     val str = readLine

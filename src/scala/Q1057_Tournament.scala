@@ -1,5 +1,3 @@
-package scala
-
 object Q1057_Tournament {
   def main(args : Array[String]) : Unit = {
     var Array(n, a, b) = readLine.split(" ").map(_.toInt)
