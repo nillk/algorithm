@@ -4,7 +4,7 @@ public class Q1747_PrimeAndPalindrome {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int n = scan.nextInt();
-     
+
         while (true) {
             if (isPalindrome(n) && isPrime(n)) {
                 System.out.println(n);
@@ -17,7 +17,10 @@ public class Q1747_PrimeAndPalindrome {
     }
      
     private static boolean isPrime(int i) {
+        if (i == 1) return false;
+        if (i == 2) return true;
         if (i % 2 == 0) return false;
+
         for (int index = 3; index <= Math.sqrt(i); index += 2) {
             if (i % index == 0) return false;
         }
