@@ -1,74 +1,59 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class Q10866_Deque {
-	public static void main(String[] args) throws Exception {
-		Scanner scan = new Scanner(System.in);
-		int N = scan.nextInt();
-		Deque dq = new Deque();
 
-		scan.nextLine();
-		while (N-- > 0) {
-			String command = scan.nextLine();
-			String[] comm = command.split(" ");
-			if (comm.length > 1) {
-				Deque.class.getMethod(comm[0], int.class).invoke(dq,
-						Integer.parseInt(comm[1]));
-			} else {
-				Object invoke = Deque.class.getMethod(comm[0]).invoke(dq);
-				System.out.println(invoke);
-			}
-		}
+  public static void main(String[] args) throws Exception {
+    BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+    StringBuilder result = new StringBuilder();
 
-		scan.close();
-	}
-}
+    int N = Integer.parseInt(reader.readLine());
+    List<Integer> deque = new ArrayList<>(N);
 
-class Deque {
-	List<Integer> deque = new ArrayList<Integer>();
+    while (N-- > 0) {
+      String command = reader.readLine();
+      String[] comm = command.split(" ");
 
-	public void push_front(int x) {
-		deque.add(0, x);
-	}
+      switch (comm[0]) {
+        case "push_front":
+          deque.add(0, Integer.parseInt(comm[1]));
+          break;
+        case "push_back":
+          deque.add(Integer.parseInt(comm[1]));
+          break;
+        case "pop_front":
+          if (deque.isEmpty()) {
+            result.append(-1).append("\n");
+          } else {
+            result.append(deque.remove(0)).append("\n");
+          }
+          break;
+        case "pop_back":
+          if (deque.isEmpty()) {
+            result.append(-1).append("\n");
+          } else {
+            result.append(deque.remove(deque.size() - 1)).append("\n");
+          }
+          break;
+        case "size":
+          result.append(deque.size()).append("\n");
+          break;
+        case "empty":
+          result.append(deque.isEmpty() ? "1" : "0").append("\n");
+          break;
+        case "front":
+          result.append(deque.isEmpty() ? "-1" : deque.get(0)).append("\n");
+          break;
+        case "back":
+          result.append(deque.isEmpty() ? "-1" : deque.get(deque.size() - 1)).append("\n");
+          break;
+      }
+    }
 
-	public void push_back(int x) {
-		deque.add(x);
-	}
+    System.out.println(result.toString());
 
-	public int pop_front() {
-		if (deque.isEmpty()) {
-			return -1;
-		}
-		return deque.remove(0);
-	}
-
-	public int pop_back() {
-		if (deque.isEmpty()) {
-			return -1;
-		}
-		return deque.remove(size() - 1);
-	}
-
-	public int size() {
-		return deque.size();
-	}
-
-	public int empty() {
-		return deque.isEmpty() ? 1 : 0;
-	}
-
-	public int front() {
-		if (deque.isEmpty()) {
-			return -1;
-		}
-		return deque.get(0);
-	}
-
-	public int back() {
-		if (deque.isEmpty()) {
-			return -1;
-		}
-		return deque.get(size() - 1);
-	}
+    reader.close();
+  }
 }
