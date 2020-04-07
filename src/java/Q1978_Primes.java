@@ -15,6 +15,7 @@ public class Q1978_Primes {
 
         scan.close();
     }
+
     public static void getPrimes() {
         PRIMES[2] = true;
         for (short i = 3; i < 1001; i += 2) {

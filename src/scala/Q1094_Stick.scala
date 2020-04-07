@@ -7,11 +7,11 @@ object Q1094_Stick {
       while (stick > x) {
         stick /= 2
       }
- 
+
       x -= stick
       count += 1
     }
- 
+
     print(count)
   }
 }

@@ -9,6 +9,6 @@ object Q1057_Tournament {
     }
     println(count)
   }
- 
+
   def next(x: Double): Int = Math.ceil(x / 2).toInt
 }
